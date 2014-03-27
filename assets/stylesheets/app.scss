@@ -1,19 +1,36 @@
-$font-stack:    Helvetica, sans-serif;
+$font-stack:    'News Cycle', sans-serif;
 $primary-color: #333;
-$bg-color: #999;
+$bg-color: #fff;
 $bg-accent: #262626;
 $bg-accent-red: #211111;
 $text-red: #821414;
 $text-blue: #0C4E4E;
-
+$grey: #2d2d2d;
+$grey-shadow: #bfbfbf;
+$grey-bg: #26251f;
+$title-green: #098d00;
+$brown: #291a05;
+$sky: #88ddf6;
+$light-grey: #8d8d8d;
 body {
+  margin:0;
   font: 100% $font-stack;
   color: $primary-color;
-  background-color: $bg-color;
+  background-color: $grey-bg;
+  z-index: 0;
 }
-
+.container {
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  height: 99%;
+  width: 1200px;
+  background-color: $brown;
+  z-index: 1;
+}
 h1 {
-  color: $text-red;
+  color: $grey;
   font-size: 125%;
 }
 
@@ -21,5 +38,108 @@ h2 {
   color: $text-blue;
   font-size: 105%;
 }
-
+.top {
+  position: absolute;
+  height: 600px;
+  width: 1200px;
+  margin-top:0;
+  background-color: $sky;
+  background: -webkit-linear-gradient(top, $sky , #fff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top, $sky, #fff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(top, $sky, #fff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, $sky , #fff); /* Standard syntax */
+  z-index: 2;
+}
+.brand{
+  width: 330px;
+  height: 315px;
+  margin-top: 170px;
+  margin-left: 50px;
+  z-index: 3;
+  h1 {
+    font-size: 68px;
+    line-height: 1em;
+    margin: 6px;
+    text-shadow: 2px 5px 10px $grey-shadow;
+  }
+  .title {
+    color: $title-green;
+    font-weight: 700;
+  }
+}
+.nav {
+  width: 330px;
+  height: 80px;
+  margin-top: 10px;
+  margin-left: 65px;
+  z-index: 3;
+  a {
+    display: block;
+    color: #2c2c2c;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 2px 0 2px 5px;
+    font-weight: 700;
+    &:hover { color: $text-blue; }
+  }
+}
+.right {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 450px;
+  width: 705px;
+  height: 550px;
+  background-color: $grey;
+  background-image: url(image_path('fescue.jpeg'));
+  box-shadow: 1px 3px 5px 5px #111;
+  z-index: 5;
+}
+#right-content {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 45px;
+  width: 705px;
+  height: 450px;
+  .header {
+    background-color: $grey-bg;
+    box-shadow: -2px 10px 5px -2px #111;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    .title {
+      color: #098d00;
+      padding: 2px 20px 2px 2px;
+      margin-left: 25px;
+      font-size: 42px;
+    }
+    .summary {
+      color: #8d8d8d;
+      padding: 2px 20px 10px 2px;
+      margin-left: 25px;
+      font-size: 24px;
+    }
+  }
+}
+.footer {
+  margin-top: 600px;
+  position: absolute;
+  background-color: $brown;
+  min-height:100px;
+  height: 25%;
+  z-index: 2;
+  .copy {
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 2px;
+    width: 430px;
+    height: 30px;
+    color: $light-grey;
+    font-size: 16px;
+    a {
+      color: $light-grey;
+      text-decoration: none;
+      font-weight: 700;
+      &:hover { color: $text-blue; }
+    }
+  }
+}
 

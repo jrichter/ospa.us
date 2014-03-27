@@ -9,8 +9,10 @@ class App < Sinatra::Base
 
   get '/' do
     @site_title = 'OSPA'
-    @title = ''
-    @subtitle = ''
+    @lineOne = '<span class="title">O</span>klahoma'
+    @lineTwo = '<span class="title">S</span>od'
+    @lineThree = '<span class="title">P</span>roducers'
+    @lineFour = '<span class="title">A</span>ssociation'
     haml :index
   end
 end
