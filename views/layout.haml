@@ -6,6 +6,11 @@
   %link{:rel => 'stylesheet', :type => 'text/css', :href => 'http://fonts.googleapis.com/css?family=News+Cycle:400,700'}
   %section.container
     %section.top
+      .sun
+      .cloud
+      .cloud2
+      .cloud3
+      .cloud4
       %a{ :href => "/", :title => "Home"}
         .brand
           %h1= @lineOne
@@ -17,6 +22,7 @@
           Contact Us
         %a{ :href => "signup", :title => "Our mailers and what not." }
           Sign up for Announcements
+      .grass
     %section.right
       = yield
     %section.footer
@@ -26,5 +32,5 @@
           JRichter
 
 
-  %script{:type => "text/javascript", :src => "#{javascript_path('jquery-2.1.0')}" }
+  -#%script{:type => "text/javascript", :src => "#{javascript_path('jquery-2.1.0')}" }
   -#%script{:type => :"text/javascript", :src => "#{javascript_path('underscore')}" }
